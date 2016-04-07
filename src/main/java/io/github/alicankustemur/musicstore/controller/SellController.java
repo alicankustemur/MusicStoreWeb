@@ -7,31 +7,34 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import io.github.alicankustemur.musicstore.model.Customer;
+import io.github.alicankustemur.musicstore.domain.Customer;
 import io.github.alicankustemur.musicstore.service.AlbumService;
 import io.github.alicankustemur.musicstore.service.CustomerService;
 
 @Controller
-@RequestMapping("/sellAlbum")
-public class SellAlbumController
+@RequestMapping("/sell")
+public class SellController
 {
 
-	@Autowired
-	AlbumService	albumService;
+	private static String	SELL_FORM	= "sellForm";
+	private static String	DONE_VIEW	= "done";
+	private static String	SELL_VIEW	= "sell";
 
 	@Autowired
-	CustomerService	customerService;
+	AlbumService			albumService;
+
+	@Autowired
+	CustomerService			customerService;
 
 	@RequestMapping
-	public String getSellAlbumForm(Model model)
+	public String getSellForm(Model model)
 	{
 		model.addAttribute("albums", albumService.getAllAlbum());
-
-		return "sellAlbumForm";
+		return SELL_FORM;
 	}
 
-	@RequestMapping(value = "sellAlbum", method = RequestMethod.POST)
-	public String sellAlbum(@ModelAttribute Customer customer)
+	@RequestMapping(method = RequestMethod.POST)
+	public String processSubmit(@ModelAttribute Customer customer)
 	{
 		System.out.println(customer.toString());
 

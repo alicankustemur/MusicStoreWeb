@@ -2,7 +2,7 @@ package io.github.alicankustemur.musicstore.dao;
 
 import java.util.List;
 
-import io.github.alicankustemur.musicstore.model.Album;
+import io.github.alicankustemur.musicstore.domain.Album;
 
 public interface AlbumRepository
 {

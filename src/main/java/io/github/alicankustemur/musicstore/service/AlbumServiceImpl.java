@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import io.github.alicankustemur.musicstore.dao.JpaAlbumRepositoryImpl;
-import io.github.alicankustemur.musicstore.model.Album;
+import io.github.alicankustemur.musicstore.domain.Album;
 
 @Service
 public class AlbumServiceImpl implements AlbumService
@@ -27,7 +27,7 @@ public class AlbumServiceImpl implements AlbumService
 
 	@Transactional
 	@Override
-	public Album sellAlbum(String name, String artistName, String variation, String genre, int songNumbers)
+	public Album saveAlbum(String name, String artistName, String variation, String genre, int songNumbers)
 	{
 
 		Album dbAlbum = getAlbumByName(name);
@@ -68,7 +68,7 @@ public class AlbumServiceImpl implements AlbumService
 
 	@Transactional
 	@Override
-	public Album sellAlbum(Album album)
+	public Album saveAlbum(Album album)
 	{
 
 		Album dbAlbum = getAlbumByName(album.getName());

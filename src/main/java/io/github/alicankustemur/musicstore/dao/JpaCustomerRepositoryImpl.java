@@ -6,7 +6,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import io.github.alicankustemur.musicstore.model.Customer;
+import io.github.alicankustemur.musicstore.domain.Customer;
 
 @Repository
 public class JpaCustomerRepositoryImpl implements CustomerRepository

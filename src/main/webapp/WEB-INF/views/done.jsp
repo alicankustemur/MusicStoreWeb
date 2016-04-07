@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>${title}</title>
+<title>İşlem Başarılı</title>
 </head>
 <body>
-	${title} Hoşgeldiniz!
-	
-	<br />
-	<a href="addAlbum">Albüm Ekle</a>
-	<br />
-	<a href="sell">Albüm Sat</a>
-			
+	İşlem Başarılı
 </body>
 </html>

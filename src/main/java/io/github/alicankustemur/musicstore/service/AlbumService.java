@@ -2,13 +2,13 @@ package io.github.alicankustemur.musicstore.service;
 
 import java.util.List;
 
-import io.github.alicankustemur.musicstore.model.Album;
+import io.github.alicankustemur.musicstore.domain.Album;
 
 public interface AlbumService
 {
-	public Album sellAlbum(String name, String artistName, String variation, String genre, int songNumbers);
+	public Album saveAlbum(String name, String artistName, String variation, String genre, int songNumbers);
 
-	public Album sellAlbum(Album album);
+	public Album saveAlbum(Album album);
 
 	public Album getAlbumByName(String name);
 

@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import io.github.alicankustemur.musicstore.model.Album;
+import io.github.alicankustemur.musicstore.domain.Album;
 
 @Repository
 public class JpaAlbumRepositoryImpl implements AlbumRepository

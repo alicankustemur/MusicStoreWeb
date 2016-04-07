@@ -1,4 +1,4 @@
-package io.github.alicankustemur.musicstore.model;
+package io.github.alicankustemur.musicstore.domain;
 
 import java.io.Serializable;
 
@@ -14,15 +14,14 @@ public class Album implements Serializable
 
 	@Id
 	@GeneratedValue
-	@Column(name = "id")
 	private long	id;
-
-	private String	variation;
 
 	private String	name;
 
 	@Column(name = "artist_name")
 	private String	artistName;
+
+	private String	variation;
 
 	private String	genre;
 

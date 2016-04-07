@@ -1,6 +1,6 @@
 package io.github.alicankustemur.musicstore.dao;
 
-import io.github.alicankustemur.musicstore.model.Customer;
+import io.github.alicankustemur.musicstore.domain.Customer;
 
 public interface CustomerRepository
 {

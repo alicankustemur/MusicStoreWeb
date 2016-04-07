@@ -1,11 +1,13 @@
-package io.github.alicankustemur.musicstore.model;
+package io.github.alicankustemur.musicstore.domain;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 public class Customer implements Serializable
@@ -15,22 +17,12 @@ public class Customer implements Serializable
 	@GeneratedValue
 	private long	id;
 
+	@NotBlank
+	@Length(min = 1, max = 10)
 	private String	name;
+
+	@NotBlank
 	private String	surname;
-
-	@Id
-	@Column(name = "album_id")
-	private long	albumId;
-
-	public long getAlbumId()
-	{
-		return albumId;
-	}
-
-	public void setAlbumId(long albumId)
-	{
-		this.albumId = albumId;
-	}
 
 	public long getId()
 	{
@@ -73,7 +65,7 @@ public class Customer implements Serializable
 	@Override
 	public String toString()
 	{
-		return "Customer [id=" + id + ", name=" + name + ", surname=" + surname + ", albumId=" + albumId + "]";
+		return "Customer [id=" + id + ", name=" + name + ", surname=" + surname + "]";
 	}
 
 }
